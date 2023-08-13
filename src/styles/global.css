@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  ::selection {
+    @apply bg-gold;
+  }
+  ::-moz-selection {
+    @apply bg-gold;
+  }
+  .container {
+    @apply sm:max-w-[100%] md:max-w-[100%] lg:max-w-[100%] xl:max-w-[1572px];
+  }
+  .container-mid {
+    max-width: 1200px !important;
+  }
+  .container-fluid {
+    max-width: 100%;
+  }
+}
+
+/* If the user prefers dark mode, 
+we of course apply color-scheme: dark, as usual */
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+}
+
+/* If the user prefers light mode, 
+we still enforce color-scheme: dark, despite the user preference */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light;
+  }
+}
+
+/* Default HTML */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-weight: 400;
+  font-size: 16px !important;
+  background-color: var(--background-color-primary);
+  @apply font-open-sans;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+p {
+  font-size: 1rem;
+  line-height: 30px;
+  margin-top: 0px;
+  color: #808080;
+  @apply font-open-sans;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-break: break-word;
+  margin-bottom: var(--size-4);
+  margin-top: 0px;
+  letter-spacing: 0.225rem;
+  line-height: 90%;
+  @apply font-branch normal-case font-normal;
+}
+h1 {
+  @apply text-[2.125rem] sm:text-[2.9375rem] md:text-[3.75rem];
+}
+h2 {
+  @apply text-[1.875rem] sm:text-[2.9375rem] md:text-[3.75rem];
+}
+h3 {
+  @apply text-[2.125rem];
+}
+h4 {
+  @apply font-open-sans font-bold tracking-[0.313rem] uppercase text-[1.25rem] mb-5;
+}
+h5 {
+  @apply text-[1.4067rem];
+}
+h6 {
+  @apply text-[1.875rem];
+}
+address {
+  @apply not-italic;
+}
+/* Default HTML End */
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+  .product-name {
+    font-size: 1.875rem;
+    margin-bottom: 0px;
+  }
+}
+
+.book-appointment-gradient-end {
+  background-color: rgba(240, 241, 239, 0);
+}
+/* Buttons */
+@layer components {
+  .py-section-large {
+    @apply py-40;
+  }
+  .py-section {
+    @apply py-16;
+  }
+  .my-section {
+    @apply my-16;
+  }
+  .py-section-small {
+    @apply py-10;
+  }
+  .py-article-section {
+    @apply py-8;
+  }
+}
